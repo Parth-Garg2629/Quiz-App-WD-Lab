@@ -150,9 +150,6 @@ The browser sends JSON `POST` requests to `api.php`, with an `action` field. The
 
 Foreign keys and cascading deletes keep related quiz and attempt records consistent. See [docs/database-design.md](docs/database-design.md) for additional schema details.
 
-## Recent fix
-
-- **Answer-option validation:** `api.php` now requires options to be a sequential PHP list, in addition to requiring 2–6 valid, unique options. This rejects malformed JSON objects that could otherwise be stored but could not be rendered correctly by the browser. The PHP syntax check passed after this change.
 
 ## Troubleshooting
 
