@@ -58,7 +58,7 @@ function quizForOwner(PDO $db, int $quizId, int $ownerId): array {
     return $quiz;
 }
 function questionOptions(mixed $options, mixed $correct): array {
-    if (!is_array($options) || count($options) < 2 || count($options) > 6) respond(['error' => 'Provide 2 to 6 answer options.'], 400);
+    if (!is_array($options) || !array_is_list($options) || count($options) < 2 || count($options) > 6) respond(['error' => 'Provide 2 to 6 answer options.'], 400);
     $options = array_map(fn($v) => cleanText($v, 250, 'Option'), $options);
     if (count(array_unique(array_map('strtolower', $options))) !== count($options)) respond(['error' => 'Answer options must be unique.'], 400);
     if (!is_int($correct) || $correct < 0 || $correct >= count($options)) respond(['error' => 'Select a valid correct answer.'], 400);
