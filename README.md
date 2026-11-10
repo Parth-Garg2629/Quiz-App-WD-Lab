@@ -2,6 +2,16 @@
 
 QuickQuiz is a lightweight classroom quiz app. Teachers can create and publish multiple-choice quizzes, and students can take published quizzes and review their scores.
 
+## Screenshots
+
+### Teacher page
+
+![Teacher dashboard showing quiz creation and the teacher's quiz list](<screenshots/Screenshot 2026-11-10 233853.png>)
+
+### Student page
+
+![Student view showing available quizzes and a quiz in progress](<screenshots/Screenshot 2026-11-10 233941.png>)
+
 ## Features
 
 - Student and teacher accounts with role-based access.
@@ -99,8 +109,6 @@ QuickQuiz is a lightweight classroom quiz app. Teachers can create and publish m
 There are no built-in accounts or default passwords. Register accounts through the app. A user's role is assigned when their account is registered, so configure the teacher email before creating that account.
 
 ## Testing
-
-There is currently no automated test suite. Use the following manual checklist in a browser:
 
 ### Teacher checks
 
