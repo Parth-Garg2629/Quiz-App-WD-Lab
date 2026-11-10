@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#">QuickQuiz</a><div id="session-area"></div></header>
+  <main>
+    <section id="auth-view" class="auth-wrap">
+      <div class="intro"><p class="eyebrow">LEARN · PRACTICE · GROW</p><h1>A little quiz goes a long way.</h1><p>Sign in to take a quiz or create one for your class.</p></div>
+      <div class="panel auth-panel">
+        <div class="tabs"><button id="login-tab" class="tab active" type="button">Sign in</button><button id="register-tab" class="tab" type="button">Create account</button></div>
+        <form id="auth-form">
+          <label id="name-wrap" class="hidden">Name<input id="name" autocomplete="name" maxlength="100"></label>
+          <label>Email<input id="email" type="email" autocomplete="email" required maxlength="254"></label>
+          <label>Password<input id="password" type="password" autocomplete="current-password" required minlength="8" maxlength="200"></label>
+          <button class="primary full" type="submit" id="auth-submit">Sign in</button>
+        </form>
+        <p id="auth-message" class="message" role="status"></p>
+        <p class="hint">Teacher accounts are enabled for addresses on the project allowlist.</p>
+      </div>
+    </section>
+    <section id="app-view" class="hidden">
+      <div class="welcome"><div><p class="eyebrow">YOUR CLASSROOM</p><h1 id="welcome-title">Welcome</h1><p id="welcome-subtitle"></p></div><button id="results-button" class="secondary" type="button">My results</button></div>
+      <div id="teacher-tools" class="panel hidden">
+        <h2>Create a quiz</h2>
+        <form id="quiz-form" class="inline-form"><label>Quiz title<input id="quiz-title" required maxlength="160" placeholder="e.g. Intro to biology"></label><label>Description<input id="quiz-description" maxlength="1000" placeholder="A short note for students"></label><button class="primary" type="submit">Create quiz</button></form>
+      </div>
+      <div id="author-panel" class="panel hidden">
+        <div class="section-heading"><div><p class="eyebrow">QUIZ EDITOR</p><h2 id="author-title">Add questions</h2></div><button id="close-editor" class="quiet" type="button">Close</button></div>
+        <form id="question-form">
+          <label>Question<input id="question-prompt" required maxlength="1000" placeholder="Type your question"></label>
+          <div class="option-grid"><label>Option 1<input class="option-input" required maxlength="250"></label><label>Option 2<input class="option-input" required maxlength="250"></label><label>Option 3<input class="option-input" maxlength="250"></label><label>Option 4<input class="option-input" maxlength="250"></label></div>
+          <label>Correct answer<select id="correct-index"><option value="0">Option 1</option><option value="1">Option 2</option><option value="2">Option 3</option><option value="3">Option 4</option></select></label>
+          <button class="primary" type="submit">Save question</button>
+        </form><div id="question-list" class="question-list"></div><p id="editor-message" class="message" role="status"></p>
+      </div>
+      <div class="section-heading"><div><p class="eyebrow" id="list-eyebrow">AVAILABLE</p><h2 id="list-title">Quizzes</h2></div><button id="refresh-button" class="quiet" type="button">Refresh</button></div>
+      <div id="quiz-list" class="card-grid"></div>
+      <div id="results-panel" class="panel hidden"><div class="section-heading"><h2 id="results-title">My results</h2><button id="close-results" class="quiet" type="button">Close</button></div><div id="results-list"></div></div>
+      <div id="take-panel" class="panel hidden"><div class="section-heading"><div><p class="eyebrow">YOUR QUIZ</p><h2 id="take-title"></h2></div><button id="close-take" class="quiet" type="button">Close</button></div><p id="take-description" class="muted"></p><form id="attempt-form"><div id="attempt-questions"></div><button class="primary" type="submit">Submit answers</button></form><p id="attempt-message" class="message" role="status"></p></div>
+      <p id="main-message" class="message" role="status"></p>
+    </section>
+  </main>
+  <footer>Built for learning, one question at a time.</footer>
+</body>
+</html>
