@@ -345,7 +345,7 @@ QuickQuiz was developed collaboratively by a team of six members, with each memb
 | No. | Team Member | Role & Contribution |
 |---|---|---|
 | 1 | **Parth Garg** | Backend development and server-side application logic. |
-| 2 | **Jitu Rewar** | Frontend development – UI implementation and interface design. |
+| 2 | **Jitendra Rewar** | Frontend development – UI implementation and interface design. |
 | 3 | **Yash Sharma** | Database design, MySQL integration, and database management. |
 | 4 | **Harsh Popat** | Frontend development – UI components and client-side functionality. |
 | 5 | **Hemang Saraiya** | Backend development support, testing, debugging, documentation, and overall project improvements. |
